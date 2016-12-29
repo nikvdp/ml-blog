@@ -1,14 +1,22 @@
-So the hashing trick is something that gets mentioned in ML papers a lot,
-but with the unfortunate caveat that every paper I've seen mentions it in passing
-and assumes you know what it is and why you'd want to use it. This is my attempt to explain that
-so that you too, in your future papers can confidently name-drop your usage of the hashing trick.
+# Jargon-free explanation of the hashing trick
 
-So the basic issue is that most methods of representing features rely on something called one-hot encoding
-(in a nut-shell, this means that you have to binarize everything. So for example to store the word 'hello' you'd
-instead store a really long row that is full of 0s for every word in the English language that isn't "hello" and one 1 under the "hello" column. 
+So the hashing trick is something that gets mentioned in ML papers a
+lot, but with the unfortunate caveat that every paper I've seen
+mentions it in passing and assumes you know what it is and why you'd
+want to use it. This is my attempt to explain that so that you too, in
+your future papers can confidently name-drop your usage of the hashing
+trick.
 
-Whie ths is a nice data structure for computers to learn from, it's not very useful for humans, humans
-need a way to represent all these "features" without taking up shit tons of space.
+So the basic issue is that most methods of representing features rely
+on something called one-hot encoding (in a nut-shell, this means that
+you have to binarize everything. So for example to store the word
+'hello' you'd instead store a really long row that is full of 0s for
+every word in the English language that isn't "hello" and one 1 under
+the "hello" column.
+
+Whie this is a nice data structure for computers to learn from, it's
+not very useful for humans, humans need a way to represent all these
+"features" without taking up shit tons of space.
 
 // TODO: merge above and below intros
 
@@ -53,7 +61,8 @@ like this:
 -->
  
  // TODO: alphabetize the order of words in the table and use `...` to show 
- // that this is not just representing the sentence but the whole dictionary
+ // that this is not just representing the sentence but the whole dictionary. Ideally also
+ // use a sentence with a repeating word for the example so that the values aren't all 1
  
 Anononick | is | an | awesome | writer | but | he | doesn't | jump | over | dogs | very | much
 ----|----|----|---------|--------|-----|----|---------|------|------|------|------|-----
@@ -138,3 +147,13 @@ This has a lot of implications. The most important of them being that
 doing things this way makes things massively more predictable. We can
 now be 100% sure what the size of our "feature vector" will be
 (it'll be whatever size we tell our hash function to output!)
+
+#### References I used when putting this together (in no particular order)
+
+- [This quora answer](https://www.quora.com/Can-you-explain-feature-hashing-in-an-easily-understandable-way)
+- [This archived writeup](https://web.archive.org/web/20160306094110/http://metaoptimize.com/qa/questions/6943/what-is-the-hashing-trick) that gets referenced everywhere but whose [original link](http://metaoptimize.com/qa/questions/6943/what-is-the-hashing-trick) appears to be down. 
+- http://wikivisually.com/wiki/Hashing_trick
+- The papers that inspired me to go try to learn this
+	- [Feature Hashing for Large Scale Multitask Learning](https://arxiv.org/pdf/0902.2206.pdf)
+	- [Hash Kernels for Structured Data](http://www.jmlr.org/papers/volume10/shi09a/shi09a.pdf)
+
