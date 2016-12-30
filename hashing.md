@@ -14,13 +14,12 @@ you have to binarize everything. So for example to store the word
 every word in the English language that isn't "hello" and one 1 under
 the "hello" column.
 
-Whie this is a nice data structure for computers to learn from, it's
-not very useful for humans, humans need a way to represent all these
-"features" without taking up shit tons of space.
+While this is a nice data structure for computers to learn from, it's
+not very useful for humans.
 
 // TODO: merge above and below intros
 
-The traditional way is to do what they call one-hot encoding. This is
+The usual way is to do what the ML folks call one-hot encoding. This is
 basically just a fancy way of saying make two columns and mark them as
 on and off.  One of the most common ways this is used is in what gets
 called the "bag-of-words" model. Imagine taking a dictionary and an
