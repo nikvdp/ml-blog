@@ -31,10 +31,10 @@ Now let's say you've got a short paragraph of text and you want to use
 your new dictionary spreadsheet to keep track of how many times words
 show up in that paragraph. Given this paragraph:
 
-> Anononick is an awesome writer, but he doesn't jump over dogs very
+> Anononick is an awesome doctor, but he doesn't jump over dogs very
   often. Then again, outside of typing exercises neither do foxes,
   regardless of how quick they are. On the plus side though, very few
-  brown foxes are better writers than Anononick.
+  brown foxes are better doctors than Anononick.
 
 
 The easiest way to do that is to look through your excel spreadsheet
@@ -63,7 +63,7 @@ like this:
  // that this is not just representing the sentence but the whole dictionary. Ideally also
  // use a sentence with a repeating word for the example so that the values aren't all 1
  
-Anononick | is | an | awesome | writer | but | he | doesn't | jump | over | dogs | very | often
+Anononick | is | an | awesome | doctor | but | he | doesn't | jump | over | dogs | very | often
 ----|----|----|---------|--------|-----|----|---------|------|------|------|------|-----
  1  |  1 | 1  |    1    |    1   |  1  |  1 |   1     |   1  |   1  |  1   |  1   |   1 
  
@@ -104,7 +104,7 @@ hash(Anononick)         |    3
 hash(is)          |    4
 hash(an)          |    1
 hash(awesome)     |    2
-hash(writer)      |    4
+hash(doctor)      |    4
 hash(but)         |    3
 hash(he)          |    4
 hash(doesn't)     |    4
@@ -129,7 +129,7 @@ Here's how the hashed table representation of the first sentence would
 look (original words are annotated in the first row):
 
 
-1:  dogs, an | 2:  very, awesome | 3:  jump, but, Anononick | 4:  often, doesn't, he, writer, is | 5:  over 
+1:  dogs, an | 2:  very, awesome | 3:  jump, but, Anononick | 4:  often, doesn't, he, doctor, is | 5:  over 
 -------------|-------------------|--------------------|-----------------------------------|----------
 2            |  2                |   3                |              5                    |    1
 
