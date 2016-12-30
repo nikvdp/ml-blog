@@ -32,7 +32,7 @@ your new dictionary spreadsheet to keep track of how many times words
 show up in that paragraph. Given this paragraph:
 
 > Anononick is an awesome writer, but he doesn't jump over dogs very
-  much. Then again, outside of typing exercises neither do foxes,
+  often. Then again, outside of typing exercises neither do foxes,
   regardless of how quick they are. On the plus side though, very few
   brown foxes are better writers than Anononick.
 
@@ -63,7 +63,7 @@ like this:
  // that this is not just representing the sentence but the whole dictionary. Ideally also
  // use a sentence with a repeating word for the example so that the values aren't all 1
  
-Anononick | is | an | awesome | writer | but | he | doesn't | jump | over | dogs | very | much
+Anononick | is | an | awesome | writer | but | he | doesn't | jump | over | dogs | very | often
 ----|----|----|---------|--------|-----|----|---------|------|------|------|------|-----
  1  |  1 | 1  |    1    |    1   |  1  |  1 |   1     |   1  |   1  |  1   |  1   |   1 
  
@@ -112,7 +112,7 @@ hash(jump)        |    3
 hash(over)        |    5
 hash(dogs)        |    1
 hash(very)        |    2
-hash(much)        |    4
+hash(often)        |    4
 
 
 
@@ -129,7 +129,7 @@ Here's how the hashed table representation of the first sentence would
 look (original words are annotated in the first row):
 
 
-1:  dogs, an | 2:  very, awesome | 3:  jump, but, Anononick | 4:  much, doesn't, he, writer, is | 5:  over 
+1:  dogs, an | 2:  very, awesome | 3:  jump, but, Anononick | 4:  often, doesn't, he, writer, is | 5:  over 
 -------------|-------------------|--------------------|-----------------------------------|----------
 2            |  2                |   3                |              5                    |    1
 
